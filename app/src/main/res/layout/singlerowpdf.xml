@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp"
+    android:elevation="4dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/singlerow"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/book" />
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/img1"
+            android:gravity="center_vertical"
+            android:text="This is Header Text"
+            android:textColor="#171515"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/notesDelete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignEnd="@+id/header"
+            android:layout_alignBottom="@+id/img1"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            app:srcCompat="@drawable/delete" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

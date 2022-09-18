@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="260dp"
+    android:background="@drawable/navheaderbg"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="25dp"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="129dp"
+        android:layout_height="121dp"
+        android:contentDescription="User Name"
+        android:id="@+id/facultyImageProfile"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="1dp"
+        android:src="@drawable/manimg" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facuilty Name"
+            android:id="@+id/facultyNameProfile"
+            android:layout_marginLeft="3dp"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Id"
+            android:id="@+id/facultyEmailProfile"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:layout_marginLeft="3dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

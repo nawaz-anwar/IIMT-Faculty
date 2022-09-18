@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Marks.Sessional_Marks">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Upload Marks"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="300dp"
+        android:layout_height="7dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/round_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerSessionalTitle"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="112dp"
+        android:background="@drawable/spinnerbg"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerStudentRollNumber"
+        android:layout_width="269dp"
+        android:layout_height="49dp"
+        android:background="@drawable/spinnerbg"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerStudentSub1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSessionalTitle"
+        app:layout_constraintVertical_bias="0.394"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerStudentSub1"
+        android:layout_width="271dp"
+        android:layout_height="50dp"
+        android:background="@drawable/spinnerbg"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSessionalTitle"
+        app:layout_constraintVertical_bias="0.124"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtSessionalTotalMarks"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Max Marks"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edtSessionalSub1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/spinnerStudentRollNumber"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSessionalTitle" />
+
+    <EditText
+        android:id="@+id/edtSessionalSub1"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter Marks"
+        app:layout_constraintBottom_toTopOf="@+id/edtSessionalSub2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/spinnerStudentSub1"
+        app:layout_constraintTop_toTopOf="@+id/spinnerStudentSub1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/spinnerStudentSub2"
+        android:layout_width="271dp"
+        android:layout_height="50dp"
+        android:background="@drawable/spinnerbg"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSessionalTitle"
+        app:layout_constraintVertical_bias="0.364"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtSessionalSub2"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter Marks"
+        app:layout_constraintBottom_toTopOf="@+id/edtSessionalSub3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toEndOf="@+id/spinnerStudentSub3"
+        app:layout_constraintTop_toTopOf="@+id/spinnerStudentSub3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/spinnerStudentSub3"
+        android:layout_width="271dp"
+        android:layout_height="50dp"
+        android:background="@drawable/spinnerbg"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSessionalTitle"
+        app:layout_constraintVertical_bias="0.251"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtSessionalSub3"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter Marks"
+        app:layout_constraintBottom_toTopOf="@+id/edtSessionalSub4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/spinnerStudentSub2"
+        app:layout_constraintTop_toTopOf="@+id/spinnerStudentSub2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/spinnerStudentSub4"
+        android:layout_width="271dp"
+        android:layout_height="50dp"
+        android:background="@drawable/spinnerbg"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/edtSessionalSub4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSessionalTitle"
+        app:layout_constraintVertical_bias="0.499"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtSessionalSub4"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter Marks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/spinnerStudentSub1"
+        app:layout_constraintTop_toTopOf="@+id/spinnerStudentSub4" />
+
+    <Spinner
+        android:id="@+id/spinnerStudentSub5"
+        android:layout_width="271dp"
+        android:layout_height="50dp"
+        android:background="@drawable/spinnerbg"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSessionalTitle"
+        app:layout_constraintVertical_bias="0.627"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtSessionalSub5"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter Marks"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toEndOf="@+id/spinnerStudentSub5"
+        app:layout_constraintTop_toTopOf="@+id/spinnerStudentSub5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSessionalMarks"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/buttonbg"
+        android:padding="10dp"
+        android:text="Upload Marks"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerStudentSub5"
+        app:layout_constraintVertical_bias="0.345" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

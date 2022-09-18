@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/checkboxt"
+    android:layout_width="fill_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/boundry"
+    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+    android:gravity="center_vertical"
+    android:hint="Enrollment Number"
+    android:layout_margin="16dp"
+    android:padding="20dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp"
+    android:textColor="#0C0C0C"
+    android:textSize="24dp">
+
+
+
+</CheckedTextView>
+

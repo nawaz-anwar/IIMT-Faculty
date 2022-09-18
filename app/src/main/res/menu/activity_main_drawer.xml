@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Profile" />
+        <item
+            android:id="@+id/profileCreateForm"
+            android:icon="@drawable/results"
+            android:title="Create Form" />
+        <item
+            android:id="@+id/profileSendNotification"
+            android:icon="@drawable/ic_baseline_notifications"
+            android:title="Send Notification" />
+        <item
+            android:id="@+id/privacyPolicy"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Privacy Policy" />
+        <item
+            android:id="@+id/aboutUs"
+            android:icon="@drawable/aboutus"
+            android:title="About us" />
+
+        <item
+            android:id="@+id/resetPassword"
+            android:icon="@drawable/ic_baseline_lock_person"
+            android:title="Reset Password" />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_baseline_logout"
+            android:title="Logout" />
+    </group>
+
+
+</menu>
