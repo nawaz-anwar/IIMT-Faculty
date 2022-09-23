@@ -63,18 +63,9 @@
             android:exported="false" />
         <activity
             android:name=".Activity.Lecture.RecentlectureActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+            android:exported="true"
+            android:theme="@style/Theme.IIMTUStudentAction" />
 
-                <data
-                    android:host="www.example.com"
-                    android:scheme="http" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".Activity.Queries.QueriesActivity"
             android:exported="true" />
@@ -89,13 +80,15 @@
             android:exported="false" />
         <activity
             android:name=".Activity.Notes.NotesActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.IIMTUStudentAction"/>
         <activity
             android:name=".Activity.Lecture.LectureActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.Students.StudentdetailsActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.IIMTUStudentAction"/>
         <activity
             android:name=".Activity.Students.AddstudentActivity"
             android:exported="false" />

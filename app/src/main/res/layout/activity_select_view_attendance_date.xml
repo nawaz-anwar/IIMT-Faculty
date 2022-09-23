@@ -73,7 +73,7 @@
             android:layout_margin="8dp"
             android:background="@drawable/spinnerbg"
             android:text="View Attendance"
-            android:textColor="#070707" />
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/btnCollectiveAttendance"
@@ -82,7 +82,7 @@
             android:layout_margin="8dp"
             android:background="@drawable/spinnerbg"
             android:text="Collective Attendance"
-            android:textColor="#070707" />
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

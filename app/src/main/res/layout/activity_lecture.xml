@@ -115,7 +115,7 @@
         app:layout_constraintHorizontal_bias="0.294"
         app:layout_constraintStart_toStartOf="@+id/btnWebex"
         app:layout_constraintTop_toTopOf="@+id/btnWebex"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="0.736" />
 
     <ImageView
         android:id="@+id/btnMsTeam"
@@ -140,10 +140,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="@+id/btnMsTeam"
-        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="@+id/btnMsTeam"
         app:layout_constraintTop_toTopOf="@+id/btnWebex"
-        app:layout_constraintVertical_bias="0.597" />
+        app:layout_constraintVertical_bias="0.736" />
 
     <View
         android:id="@+id/view3"

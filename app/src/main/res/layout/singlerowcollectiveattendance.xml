@@ -25,26 +25,63 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="1dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <RelativeLayout
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2">
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:padding="5dp"
+                        android:text="Name:"
+                        android:textColor="#0A7BDD"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/attendanceStudentName"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="2dp"
-                        android:text="Name"
-                        android:textAppearance="?android:textAppearanceMedium"
-                        android:textColor="#050505"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
+                        android:layout_marginLeft="3dp"
+                        android:text="Hitesh Kumar"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:padding="5dp"
+                        android:text="Roll Number:"
+                        android:textColor="#0A7BDD"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/enno_input_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="Hitesh Kumar"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -54,24 +91,6 @@
                 android:layout_height="wrap_content"
                 android:padding="1dp"
                 android:orientation="horizontal">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2">
-
-                    <TextView
-                        android:id="@+id/enno_input_tv"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="2dp"
-                        android:text="Roll Number:"
-                        android:textAppearance="?android:textAppearanceMedium"
-                        android:textColor="#050505"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
-                </RelativeLayout>
 
 
             </LinearLayout>
@@ -90,10 +109,10 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Attendance:"
-                        android:textColor="#0A0A0A"
                         android:padding="4dp"
-                        android:textAppearance="?android:textAppearanceMedium" />
+                        android:text="Attendance:"
+                        android:textColor="#0A7BDD"
+                        android:textSize="18sp" />
 
                 </RelativeLayout>
                 <RelativeLayout
@@ -105,12 +124,11 @@
                         android:id="@+id/present_input_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="00/10"
-                        android:textStyle="bold"
-                        android:textColor="#070707"
                         android:padding="5dp"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        />
+                        android:text="00/10"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
 
                 </RelativeLayout>
 
@@ -122,10 +140,10 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Absent:"
-                        android:textColor="#050505"
                         android:padding="4dp"
-                        android:textAppearance="?android:textAppearanceMedium" />
+                        android:text="Absent:"
+                        android:textColor="#0A7BDD"
+                        android:textSize="18sp" />
 
                 </RelativeLayout>
                 <RelativeLayout
@@ -137,12 +155,11 @@
                         android:id="@+id/absent_input_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textStyle="bold"
-                        android:textColor="#070707"
                         android:padding="5dp"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        />
+                        android:text="0"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
 
                 </RelativeLayout>
 
@@ -167,9 +184,8 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:text="Percentage:"
-                        android:textAppearance="?android:textAppearanceMedium"
-                        android:textColor="#050505"
-                        />
+                        android:textColor="#0A7BDD"
+                        android:textSize="19sp" />
 
                 </RelativeLayout>
 
@@ -184,9 +200,9 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:text="0.00%"
-                        android:textStyle="bold"
                         android:textColor="#000000"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
 

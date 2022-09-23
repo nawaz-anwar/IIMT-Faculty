@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.SearchView;
 
 import com.coetusstudio.iimtufaculty.Adapter.LectureAdapter;
@@ -28,6 +29,8 @@ public class RecentlectureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityRecentlectureBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        setTitle("Search Lecture");
 
         Intent intent = getIntent();
         facultySection = intent.getStringExtra("section");
@@ -61,9 +64,13 @@ public class RecentlectureActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
-        //binding.searchViewLecture.clearFocus();
+        getMenuInflater().inflate(R.menu.searchmenu,menu);
 
-        binding.searchViewLecture.setOnQueryTextListener(new SearchView.OnQueryTextListener()
+        MenuItem item=menu.findItem(R.id.search);
+
+        SearchView searchView=(SearchView)item.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
         {
             @Override
             public boolean onQueryTextSubmit(String s) {

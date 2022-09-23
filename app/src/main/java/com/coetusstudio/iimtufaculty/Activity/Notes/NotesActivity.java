@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.SearchView;
 
@@ -32,6 +33,8 @@ public class NotesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityNotesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        setTitle("Search PDF");
 
         Intent intent = getIntent();
         facultySection = intent.getStringExtra("section");
@@ -77,9 +80,13 @@ public class NotesActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu)
     {
 
-        binding.searchViewNotes.clearFocus();
+        getMenuInflater().inflate(R.menu.searchmenu,menu);
 
-        binding.searchViewNotes.setOnQueryTextListener(new SearchView.OnQueryTextListener()
+        MenuItem item=menu.findItem(R.id.search);
+
+        SearchView searchView=(SearchView)item.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
         {
             @Override
             public boolean onQueryTextSubmit(String s) {

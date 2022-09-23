@@ -6,23 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Activity.Lecture.RecentlectureActivity">
 
-    <SearchView
-        android:id="@+id/searchViewLecture"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="1dp"
-        android:background="@drawable/searchmenu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:queryHint="Search Here..."
-        android:iconifiedByDefault="false"/>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcLecture"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

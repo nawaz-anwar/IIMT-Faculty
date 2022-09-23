@@ -182,17 +182,17 @@ public class View_Collective_Attendance extends AppCompatActivity {
         public void onBindViewHolder(@NonNull RViewHolder v, int i) {
             View view = v.itemView;
             String percent = details.get(i).getPercent();
-            if(Float.valueOf(percent)<=75){
+            if(Float.valueOf(percent)<=60){
                 v.percenttv.setTextColor(Color.RED);
             }
-            else if(Float.valueOf(percent)>75 && Float.valueOf(percent)<85 ){
+            else if(Float.valueOf(percent)>60 && Float.valueOf(percent)<85 ){
                 v.percenttv.setTextColor(Color.BLUE);
             }
             else if(Float.valueOf(percent)>=85){
-                v.percenttv.setTextColor(Color.MAGENTA);
+                v.percenttv.setTextColor(Color.BLACK);
             }
-            v.enrollmenttv.setText("Roll Number: "+details.get(i).getEnrollment());
-            v.nametv.setText("Name: "+details.get(i).getName());
+            v.enrollmenttv.setText(details.get(i).getEnrollment());
+            v.nametv.setText(details.get(i).getName());
             v.absenttv.setText(details.get(i).getAbsent());
             v.percenttv.setText(percent+" %");
             v.attendancetv.setText(details.get(i).getAttendance());

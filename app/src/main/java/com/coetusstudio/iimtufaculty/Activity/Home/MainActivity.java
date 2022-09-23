@@ -22,6 +22,7 @@ import com.coetusstudio.iimtufaculty.Activity.Notification.SendnotificationActiv
 import com.coetusstudio.iimtufaculty.Activity.Marks.Sessional_Marks;
 import com.coetusstudio.iimtufaculty.Activity.Students.StudentdetailsActivity;
 import com.coetusstudio.iimtufaculty.VerifyActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     FirebaseUser currentUser ;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
+    FloatingActionButton emailFeedback;
     Toolbar toolbar;
     String facultySection, facultySubject, facultyImage;
 
@@ -84,12 +86,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+        emailFeedback = findViewById(R.id.emailFeedback);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.OpenDrawer, R.string.CloseDrawer);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        toolbar.setTitle("IIMT Faculty");
+        toolbar.setTitle("IIMTU Faculty");
 
         updateNavHeader();
 
@@ -131,6 +134,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 drawerLayout.closeDrawer(GravityCompat.START);
 
                 return true;
+            }
+        });
+
+        emailFeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                emailIntent.setType("text/plain");
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {"feedback.coetusstudio@gmail.com"});
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "IIMTU Faculty Feedback");
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "Type your query here...");
+                emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("content://path/to/email/attachment"));
+                startActivity(emailIntent);
             }
         });
 

@@ -18,7 +18,7 @@
             android:title="Send Notification" />
         <item
             android:id="@+id/privacyPolicy"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_baseline_privacy"
             android:title="Privacy Policy" />
         <item
             android:id="@+id/aboutUs"

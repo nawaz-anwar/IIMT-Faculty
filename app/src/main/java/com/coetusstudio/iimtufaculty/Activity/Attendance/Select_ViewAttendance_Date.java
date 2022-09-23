@@ -100,29 +100,50 @@ public class Select_ViewAttendance_Date extends AppCompatActivity {
                 });
 
 
-        binding.btnViewAttendanceByDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (attendanceDate.equals("Select Date (Optional)")){
-                    Toast.makeText(getApplicationContext(), "Please! Select the Date", Toast.LENGTH_SHORT).show();
-                }else {
-                    Intent intent = new Intent(Select_ViewAttendance_Date.this, View_Attendace_ByDate.class);
-                    intent.putExtra("facultySubject", facultySubject);
-                    intent.putExtra("facultySection", facultySection);
-                    intent.putExtra("attendanceDate", attendanceDate);
+        if ("Update Attendance".equals(textValue)){
+
+            binding.btnCollectiveAttendance.setVisibility(View.INVISIBLE);
+
+            binding.btnViewAttendanceByDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (attendanceDate.equals("Select Date (Optional)")){
+                        Toast.makeText(getApplicationContext(), "Please! Select the Date", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Intent intent = new Intent(Select_ViewAttendance_Date.this, View_Attendace_ByDate.class);
+                        intent.putExtra("facultySubject", facultySubject);
+                        intent.putExtra("facultySection", facultySection);
+                        intent.putExtra("attendanceDate", attendanceDate);
+                        startActivity(intent);
+                    }
+                }
+            });
+        }else{
+            binding.btnViewAttendanceByDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (attendanceDate.equals("Select Date (Optional)")){
+                        Toast.makeText(getApplicationContext(), "Please! Select the Date", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Intent intent = new Intent(Select_ViewAttendance_Date.this, View_Attendace_ByDate.class);
+                        intent.putExtra("facultySubject", facultySubject);
+                        intent.putExtra("facultySection", facultySection);
+                        intent.putExtra("attendanceDate", attendanceDate);
+                        startActivity(intent);
+                    }
+                }
+            });
+
+            binding.btnCollectiveAttendance.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Select_ViewAttendance_Date.this, View_Collective_Attendance.class);
+                    intent.putExtra("facultySubject",facultySubject);
+                    intent.putExtra("facultySection",facultySection);
                     startActivity(intent);
                 }
-            }
-        });
+            });
+        }
 
-        binding.btnCollectiveAttendance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Select_ViewAttendance_Date.this, View_Collective_Attendance.class);
-                intent.putExtra("facultySubject",facultySubject);
-                intent.putExtra("facultySection",facultySection);
-                startActivity(intent);
-            }
-        });
     }
 }

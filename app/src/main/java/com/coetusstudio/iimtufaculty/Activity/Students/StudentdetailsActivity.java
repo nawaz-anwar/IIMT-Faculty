@@ -33,6 +33,7 @@ public class StudentdetailsActivity extends AppCompatActivity {
     RecyclerView recviewStudent;
     StudentAdapter studentAdapter;
     FirebaseAuth auth;
+    String section;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,7 @@ public class StudentdetailsActivity extends AppCompatActivity {
         binding = ActivityStudentdetailsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setTitle("Search here..");
+        setTitle("Search Roll Number");
 
         auth = FirebaseAuth.getInstance();
         FirebaseDatabase.getInstance().getReference().child("Faculty Data").addValueEventListener(new ValueEventListener() {
@@ -48,7 +49,6 @@ public class StudentdetailsActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 for (DataSnapshot dsp : snapshot.getChildren()) {
-                    String section;
 
                     try {
                         section = dsp.child(auth.getCurrentUser().getUid()).child("facultySection").getValue(String.class).toString();
@@ -95,9 +95,13 @@ public class StudentdetailsActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
-        binding.searchViewStudent.clearFocus();
+        getMenuInflater().inflate(R.menu.searchmenu,menu);
 
-        binding.searchViewStudent.setOnQueryTextListener(new SearchView.OnQueryTextListener()
+        MenuItem item=menu.findItem(R.id.search);
+
+        SearchView searchView=(SearchView)item.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
         {
             @Override
             public boolean onQueryTextSubmit(String s) {
@@ -120,7 +124,7 @@ public class StudentdetailsActivity extends AppCompatActivity {
     {
         FirebaseRecyclerOptions<StudentDetails> options =
                 new FirebaseRecyclerOptions.Builder<StudentDetails>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("IIMTU").child("Student").orderByChild("studentAdmissionNumber").startAt(s).endAt(s+"\uf8ff"), StudentDetails.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Student Data").child(section).orderByChild("studentRollNumber").startAt(s).endAt(s+"\uf8ff"), StudentDetails.class)
                         .build();
 
         studentAdapter=new StudentAdapter(options);
