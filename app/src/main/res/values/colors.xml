@@ -22,5 +22,6 @@
     <color name="backgroundcornersEnd">#AE0E4E</color>
     <color name="card_view_text">#4C3D3D</color>
     <color name="light_text_bg">#433434</color>
+    <color name="light_white_bg">#F8F5F5</color>
 
 </resources>

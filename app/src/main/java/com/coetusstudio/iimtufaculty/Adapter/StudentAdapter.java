@@ -67,27 +67,19 @@ public class StudentAdapter extends FirebaseRecyclerAdapter<StudentDetails,Stude
             public void onClick(View view) {
                 final DialogPlus dialogPlus= DialogPlus.newDialog(holder.img.getContext())
                         .setContentHolder(new ViewHolder(R.layout.dialogstudent))
-                        .setExpanded(true,1600)
+                        .setExpanded(true,1000)
                         .create();
 
 
                 View myview=dialogPlus.getHolderView();
                 final EditText name=myview.findViewById(R.id.updNameStudent);
                 final EditText email=myview.findViewById(R.id.updEmailStudent);
-                final EditText rollNumber=myview.findViewById(R.id.updRollNumberStudent);
-                final EditText admissionNumber=myview.findViewById(R.id.updAdmissionNumberStudent);
-                final EditText enrollmentNumber=myview.findViewById(R.id.updEnrollmentNumberStudent);
-                final EditText branch=myview.findViewById(R.id.updBranchStudent);
                 final EditText grade=myview.findViewById(R.id.updGradeStudent);
                 Button submit=myview.findViewById(R.id.updBtnStudent);
 
 
                 name.setText(StudentDetails.getStudentName());
                 email.setText(StudentDetails.getStudentEmail());
-                rollNumber.setText(StudentDetails.getStudentRollNumber());
-                admissionNumber.setText(StudentDetails.getStudentAdmissionNumber());
-                enrollmentNumber.setText(StudentDetails.getStudentEnrollmentNumber());
-                branch.setText(StudentDetails.getStudentBranch());
                 grade.setText(StudentDetails.getStudentGrade());
                 dialogPlus.show();
 
@@ -97,10 +89,6 @@ public class StudentAdapter extends FirebaseRecyclerAdapter<StudentDetails,Stude
                         Map<String,Object> map=new HashMap<>();
                         map.put("studentName",name.getText().toString());
                         map.put("studentEmail",email.getText().toString());
-                        map.put("studentRollNumber",rollNumber.getText().toString());
-                        map.put("studentAdmissionNumber",admissionNumber.getText().toString());
-                        map.put("studentEnrollmentNumber",enrollmentNumber.getText().toString());
-                        map.put("studentBranch",branch.getText().toString());
                         map.put("studentGrade",grade.getText().toString());
 
 
